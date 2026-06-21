@@ -9,11 +9,11 @@ from collections import Counter
 st.set_page_config(
     page_title="Recyclable Waste Detection",
     page_icon="♻️",
-    layout="wide", # Diubah ke wide agar gambar dan tabel lebih lega
+    layout="wide", 
     initial_sidebar_state="collapsed"
 )
 
-# Custom CSS styling - Dipertahankan untuk background dan header
+# Custom CSS styling 
 st.markdown("""
 <style>
     body, [data-testid="stAppViewContainer"] {
@@ -95,16 +95,16 @@ with col_opt:
     st.markdown('<span class="section-label">⚙️ Pengaturan Model</span>', unsafe_allow_html=True)
     model_option = st.selectbox(
         "Pilih model inferensi:",
-        ["YOLOv8s Baseline", "YOLOv8s + Lighting Augmentation"],
+        ["YOLOv8s Baseline", "Optimation Lighting Augmentation"],
         key="model_select"
     )
     
     if model_option == "YOLOv8s Baseline":
         st.caption("Model standar YOLOv8s tanpa optimasi cahaya tambahan.")
-        model_path = "best.pt" # Sesuaikan nama file asli modelmu
+        model_path = "baseline_best.pt" # Sesuaikan nama file asli modelmu
     else:
         st.caption("Model yang telah dioptimasi dengan variasi nilai Hue, Saturation, dan Value.")
-        model_path = "best.pt" # Sesuaikan nama file asli modelmu
+        model_path = "augmented_best.pt" # Sesuaikan nama file asli modelmu
 
 with col_up:
     st.markdown('<span class="section-label">📂 Unggah Gambar Uji</span>', unsafe_allow_html=True)

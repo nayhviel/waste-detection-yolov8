@@ -219,6 +219,6 @@ if uploaded_file is not None and model_loaded:
 # Footer
 st.markdown("""
 <div style='text-align: center; margin-top: 50px; color: #81c784; font-size: 0.85rem;'>
-    © 2026 Skripsi Mar'atu Nadhifah Nayla | Universitas Negeri Semarang
+    © 2026 Mar'atu Nadhifah Nayla | Universitas Negeri Semarang
 </div>
 """, unsafe_allow_html=True)
